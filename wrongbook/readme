@@ -1,0 +1,11 @@
+# 启动、重启和停止neo4j服务命令, 在neo4j的bin目录下执行下面的命令
+./neo4j start
+./neo4j restart
+./neo4j stop
+
+# 启动python 程序命令
+sudo nohup python2 service.py --port=8888 --log_file_prefix=tornado_8888.log "$@" > nohup.log 2>&1 &
+
+# 停止python 程序命令为kill进程
+ps -aux|grep python
+kill -9  上面查到的相关的python进程号
